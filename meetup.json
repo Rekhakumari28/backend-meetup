@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Marketing Seminar",
+        "typeOfEvent": "Offline",
+        "hostedBy": "Marketing Experts",
+        "startTime": "Tue Aug 15 2023 at 10:00:00 AM",
+        "endTime":"Tue Aug 15 2023 at 12:00:00 PM",
+        "address":"Marketing City, 789 Marketing Avenue, City",
+        "price": "₹ 3,000",
+        "speakers" : [{"name": "Sarah Johnson", "jobPost": "Marketing Manager"},{"name": "Michael Brown", "jobPost": "SEO Specialist"}],
+        "details": "In fact, we have developed a Seminar Marketing Online System that is helping presenters all over the world fill up their events and seminar rooms with thousands of qualified prospects.The fact is, promoting live, in-person seminars is not an easy undertaking.  Not only do you have to persuade prospects to give you their time, but you have to convince them that you are different and better than anyone else out there. ",
+        "dressCode": "Smart casual",
+        "ageRestriction": "18 and above",
+        "eventTags": ["Marketing", "Digital"],
+        "imageUrl" : "https://img.freepik.com/premium-photo/business-seminar-speaker-doing-presentation-professional-training-about-marketing-sales-ecommerce-flat-illustration-public-conference-motivation-business-audience_977617-90241.jpg"
+    
+    }
+]
