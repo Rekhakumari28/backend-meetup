@@ -16,10 +16,6 @@ app.use(express.json())
 
 initializeDatabase()
 
-app.get("/", (req,res)=>{
-    res.send("Hello Express!")
-})
-
 async function createEvent(newEvent){
     try {
         const events = new Meetup(newEvent)
