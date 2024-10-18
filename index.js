@@ -102,6 +102,30 @@ app.get("/events/tags/:tagName", async(req,res)=>{
     }
 })
 
+
+async function updateEventByTitle(eventTitle, dataToUpdate) {
+    try {
+        const events = await Meetup.findOneAndUpdate({title: eventTitle}, dataToUpdate, {new: true})
+        return events
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+app.post("/events/title/:eventTitle", async (req,res)=>{
+    try {
+        const events = await updateEventByTitle(req.params.eventTitle, req.body)
+        if(events.length != 0){
+            res.status(200).json({message: "Event is updated successfully", event: events})
+        }else{
+            res.status(404).json({error: "No events found."}) 
+        }
+    } catch (error) {
+        res.status(500).json({error: "Failed to find events."})
+    }
+})
+
+
 async function deleteEvent(eventId){
     try{
         const deletedEvent = await Meetup.findByIdAndDelete(eventId)
