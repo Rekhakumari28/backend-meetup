@@ -102,6 +102,30 @@ app.get("/events/tags/:tagName", async(req,res)=>{
     }
 })
 
+async function deleteEvent(eventId){
+    try{
+        const deletedEvent = await Meetup.findByIdAndDelete(eventId)
+        // console.log(deletedEvent)
+        return deletedEvent
+    }catch(error){
+        console.log(error)
+    }
+}
+
+app.delete("/events/:eventId", async (req,res)=>{
+    try{
+        const deletedEvent = await deleteEvent(req.params.eventId)
+        if(deletedEvent){
+            res.status(200).json({message: "Event deleted successfully."})
+        }else{
+            res.status(404).json({error: "Event not found."})
+        }
+    }catch(error){
+        res.status(500).json({error: "Failed to delete event."})
+    }
+})
+
+
 
 const PORT = process.env.PORT
 
