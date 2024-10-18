@@ -31,9 +31,11 @@ const meetupSchema = new mongoose.Schema({
     price: {
         type: Number,
     },
-    speakers : [{
-        type: String,
-
+    speakers: [ {person:{
+        name: String,
+        designation: String,
+        imageUrl: String
+        }
     }],
     details: {
         type: String,
