@@ -22,6 +22,9 @@ const meetupSchema = new mongoose.Schema({
         type: String,
        
     },
+    city: {
+        type: String,
+    },
     address: {
         type: String,
     },
